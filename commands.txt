@@ -1,0 +1,19 @@
+
+mysql -u root -p123 -P 3307 -h 127.0.0.1 -e 'show databases;'
+
+mysql -u root -p123 -P 3307 -h 127.0.0.1 -e 'use movies; show tables'
+mysql -u root -p123 -P 3307 -h 127.0.0.1 -e 'use animations; show tables'
+
+mysql -u root -p123 -P 3307 -h 127.0.0.1 -e 'select * from movies.FightClub'
+mysql -u root -p123 -P 3307 -h 127.0.0.1 -e 'select * from movies.TheMist'
+
+mysql -u root -p123 -P 3307 -h 127.0.0.1 -e 'select * from animations.AOT'
+mysql -u root -p123 -P 3307 -h 127.0.0.1 -e 'select * from animations.RickandMorty'
+
+
+cd in path of cloned project (The same place where you typed the <git clone > command )
+cd in project folder (Currently, his name is <mysql_dump_lab>)
+
+mysqldump -u root -p123 -P 3307 -h 127.0.0.1  --databases movies animations > ./backups/databases.sql
+
+
